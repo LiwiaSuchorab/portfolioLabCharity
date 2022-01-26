@@ -40,7 +40,7 @@ public class Donation {
     @NotEmpty
     private String pickUpComment;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private User user;
 
     @ManyToMany
